@@ -549,13 +549,13 @@ const Trust = () => {
               <div className="w-12 h-12 md:w-14 md:h-14 bg-zinc-200 dark:bg-zinc-800 border border-border-subtle overflow-hidden rounded-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" 
-                  alt="Александр Волков" 
+                  alt="Сергей Леконцев" 
                   className="w-full h-full object-cover grayscale"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div>
-                <div className="font-sans font-black text-base md:text-lg uppercase tracking-tighter">Александр Волков</div>
+                <div className="font-sans font-black text-base md:text-lg uppercase tracking-tighter">Сергей Леконцев</div>
                 <div className="text-[10px] md:text-xs text-text-muted uppercase tracking-widest font-bold">Главный инженер</div>
               </div>
             </div>
