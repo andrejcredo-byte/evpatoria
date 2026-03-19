@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-bg-main: var(--bg-main);
+  --color-bg-card: var(--bg-card);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
+}
+
+:root {
+  --brand-primary: #b08d57; /* Refined Gold */
+  --brand-secondary: #1a1a1a;
+  
+  /* Warm Luxury Theme */
+  --bg-main: #f9f7f2; /* Warm paper */
+  --bg-card: #ffffff;
+  --text-main: #1c1c1c;
+  --text-muted: #5a5a5a;
+  --border-subtle: rgba(176, 141, 87, 0.15);
+}
+
+.dark {
+  --bg-main: #0f0f0f;
+  --bg-card: #161616;
+  --text-main: #f9f7f2;
+  --text-muted: #a0a0a0;
+  --border-subtle: rgba(176, 141, 87, 0.2);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg-main text-text-main font-sans antialiased transition-colors duration-700 overflow-x-hidden relative;
+  }
+  
+  /* Luxury Noise Texture Overlay */
+  body::before {
+    content: "";
+    @apply fixed inset-0 pointer-events-none z-[9999];
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  .dark body::before {
+    opacity: 0.05;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif font-light tracking-tight;
+  }
+}
+
+.text-premium {
+  @apply text-brand-primary;
+}
+
+.glass-card {
+  @apply bg-bg-card border border-border-subtle rounded-[2rem] shadow-sm;
+}
+
+.btn-primary {
+  @apply px-10 py-4 bg-brand-primary hover:bg-[#96774a] text-white font-medium rounded-full transition-all duration-500 shadow-lg shadow-brand-primary/20 active:scale-[0.98] uppercase tracking-[0.2em] text-[10px];
+}
+
+.btn-secondary {
+  @apply px-10 py-4 bg-transparent hover:bg-brand-primary hover:text-white text-text-main font-medium rounded-full transition-all duration-500 border border-brand-primary/30 active:scale-[0.98] uppercase tracking-[0.2em] text-[10px];
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Custom scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
