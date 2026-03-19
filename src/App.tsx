@@ -346,7 +346,7 @@ const Portfolio = () => {
     {
       title: 'Вилла в современном стиле',
       location: 'Евпатория',
-      image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80',
+      image: '/project1.jpg',
       tag: 'Строительство',
       details: {
         work: 'Полный цикл строительства: от земляных работ до чистовой отделки. Использован газобетон высшей категории, панорамное остекление.',
@@ -357,7 +357,7 @@ const Portfolio = () => {
     {
       title: 'Кровля частного дома',
       location: 'Заозерное',
-      image: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=80',
+      image: '/project2.jpg',
       tag: 'Кровля',
       details: {
         work: 'Демонтаж старого покрытия, усиление стропильной системы, монтаж мягкой черепицы с гарантией 15 лет.',
@@ -368,7 +368,7 @@ const Portfolio = () => {
     {
       title: 'Двухэтажный коттедж',
       location: 'Саки',
-      image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+      image: '/project3.jpg',
       tag: 'Под ключ',
       details: {
         work: 'Строительство по индивидуальному проекту. Монолитный каркас, заполнение ракушечником, фасадная отделка короедом.',
@@ -426,7 +426,7 @@ const Portfolio = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-main via-bg-main/40 to-transparent opacity-90" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 p-6 px-14 md:p-10 md:px-24 w-full">
                       <span className="inline-block px-3 py-1 bg-brand-primary text-white text-[9px] font-bold uppercase tracking-widest mb-3">
                         {project.tag}
@@ -549,13 +549,13 @@ const Trust = () => {
               <div className="w-12 h-12 md:w-14 md:h-14 bg-zinc-200 dark:bg-zinc-800 border border-border-subtle overflow-hidden rounded-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" 
-                  alt="Сергей Леконцев" 
+                  alt="Александр Волков" 
                   className="w-full h-full object-cover grayscale"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div>
-                <div className="font-sans font-black text-base md:text-lg uppercase tracking-tighter">Сергей Леконцев</div>
+                <div className="font-sans font-black text-base md:text-lg uppercase tracking-tighter">Александр Волков</div>
                 <div className="text-[10px] md:text-xs text-text-muted uppercase tracking-widest font-bold">Главный инженер</div>
               </div>
             </div>
